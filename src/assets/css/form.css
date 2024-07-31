@@ -1,0 +1,133 @@
+:root {
+    --surface-color: #fff;
+    --main-white: #ffffff;
+    --main-text-color: #424242;
+    --main-bg-color: #e0d1b9;
+    --main-bg-colorDark: #d1c0a4;
+    --main-bg-color-secondary: #df7b62;
+    --main-bg-color-secondaryDark: #bb5a41;
+  }  
+  
+  body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container__form {
+    margin-top: 3px;
+    background-color: var(--surface-color);
+    border-radius: 15px;
+    border: solid;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+
+}
+
+.container__form img {
+    width: auto;
+    max-height: 160px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.content__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.content__form select {
+    background-color: var(--surface-color);
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.content__form .id {
+    display: none;
+}
+
+.content__form input:focus {
+    border-color: var(--main-bg-color-secondary);
+    outline: none;
+}
+
+.content__form button {
+    padding: 10px;
+    background-color: var(--main-bg-color-secondary);
+    border: none;
+    border-radius: 10px;
+    color: var(--surface-color);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.content__form button:hover {
+    background-color: var(--main-bg-color-secondaryDark);
+}
+
+.content__form .label {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+}
+.eat__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+.eat__list2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    padding-left: 15px;
+}
+
+ .bottom{
+    padding-bottom: 20px;
+}
+
+.icon__list {
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon__list img {
+    margin-top: 15px;
+    width: 40px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.footer_buttom {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.selectpet {
+    color: var(--main-text-color);
+}

@@ -1,0 +1,216 @@
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+    --main-white: #ffffff;
+    --main-text-color: #424242;
+    --main-bg-color: #e0d1b9;
+    --main-bg-colorDark: #d1c0a4;
+    --main-bg-color-secondary: #df7b62;
+    --main-bg-color-secondaryDark: #bb5a41;
+  }
+
+  
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    text-align: center;
+}
+  
+  .container {
+    padding-top: 7em;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  .content .title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .orders {
+    padding-top: 20px;
+  }
+  .orders .title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+.cards {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    background-color: var(--main-bg-color-secondary);
+    max-width: 16em;
+    border-radius: calc(var(--curve) * 1px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+    text-decoration: none;
+  }
+  
+  .card__image {      
+    width: 100%;
+    height: auto;
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+
+  .card__header-text {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+.card__header-text:hover {
+    transform: scale(1.1);
+}
+
+  .card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }       
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 1.2em;
+    text-transform: capitalize;
+    margin: 0 0 .3em;
+    color: var(--main-bg-color-secondary);
+  }
+
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+  }
+  
+  
+  .card__description {
+    padding: 0 2em 0em;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--main-text-color);   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  } 
+
+.table th h1 {
+    font-weight: bold;
+    font-size: 1em;
+  text-align: left;
+  color: var(--main-bg-color-secondary);
+}
+
+.table td {
+    font-weight: normal;
+    font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+     -moz-box-shadow: 0 2px 2px -2px #0E1119;
+          box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.table {
+    border: solid 2px;
+    border-radius: 20px;
+    text-align: left;
+    overflow: hidden;
+    margin: 0 auto;
+    display: table;
+    width: 65em;
+    padding: 0 1em 8em 1em;
+}
+
+.table td, .table th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+  padding-left:2%;  
+}
+
+.order__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-primary {
+  background-color: var(--main-bg-color-secondary);
+  color: var(--surface-color);
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  padding: 7px;
+}
+
+.btn-primary:hover {
+  color: var(--main-white);
+  border-color: var(--main-bg-color-secondaryDark);
+  background-color: var(--main-bg-color-secondaryDark);
+
+}
