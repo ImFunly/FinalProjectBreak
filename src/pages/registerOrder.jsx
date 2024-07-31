@@ -44,7 +44,7 @@ function registerPet() {
         }
   
         try {
-          const response = await fetch(`http://localhost:5000/pet/${userIdAsInt}`, {
+          const response = await fetch(`https://finalprojectbreackbackend.onrender.com/pet/${userIdAsInt}`, {
             headers: {
               'Authorization': `Bearer ${token}`,
             },
@@ -68,7 +68,7 @@ function registerPet() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/order/create', {
+            const response = await fetch('https://finalprojectbreackbackend.onrender.com/order/create', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ customer_id, price, shipping_address, item, payment_status, order_status})

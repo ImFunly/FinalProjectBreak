@@ -35,7 +35,7 @@ function Dashboard() {
       }
 
       try {
-        const response = await fetch(`http://localhost:5000/pet/${userIdAsInt}`, {
+        const response = await fetch(`https://finalprojectbreackbackend.onrender.com/pet/${userIdAsInt}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -75,7 +75,7 @@ function Dashboard() {
       }
 
       try {
-        const response = await fetch(`http://localhost:5000/order/${userIdAsInt}`, {
+        const response = await fetch(`https://finalprojectbreackbackend.onrender.com/order/${userIdAsInt}`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

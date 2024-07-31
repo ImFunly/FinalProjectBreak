@@ -18,7 +18,7 @@ function registerPet() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/pet/create', {
+            const response = await fetch('https://finalprojectbreackbackend.onrender.com/pet/create', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ user_id , name, weight, breed, sexo })

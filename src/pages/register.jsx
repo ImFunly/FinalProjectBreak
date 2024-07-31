@@ -18,11 +18,9 @@ function Register() {
 
       try {
           await register(name, email, phone, password);
-          setSuccess('Registro exitoso');
           setError('');
       } catch (err) {
           setError(err.message || 'Error en el registro');
-          setSuccess('');
       }
   };
 

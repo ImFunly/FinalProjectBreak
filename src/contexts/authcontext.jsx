@@ -13,7 +13,7 @@ export const AuthProvider = ({ children }) => {
       if (!token) return;
 
       try {
-        const response = await fetch('http://localhost:5000/user/user-info', {
+        const response = await fetch('https://finalprojectbreackbackend.onrender.com/user/user-info', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (name, email, phone, password) => {
     try {
-      const response = await fetch('http://localhost:5000/user/create', {
+      const response = await fetch('https://finalprojectbreackbackend.onrender.com/user/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, phone, password })
@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }) => {
 
   const loginUser = async (email, password) => {
     try {
-        const response = await fetch('http://localhost:5000/user/login', {
+        const response = await fetch('https://finalprojectbreackbackend.onrender.com/user/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
