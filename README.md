@@ -1,1 +1,1 @@
-![DogFood](\src\assets\images\web.png)
+![DogFood](src/assets/images/web.png)
